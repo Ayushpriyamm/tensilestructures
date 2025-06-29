@@ -23,7 +23,7 @@ export default function Home() {
             Application.
           </p>
           <Link href={"/about"}>
-            <button className="bg-blue-800 px-4 py-2 cursor-pointer hover:opacity-90 rounded-lg">
+            <button className="bg-blue-400 px-4 py-2 cursor-pointer hover:opacity-90 rounded-lg">
               Read More
             </button>
           </Link>
