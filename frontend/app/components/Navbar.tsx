@@ -26,14 +26,13 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    "Home",
-    "About",
-    "Services",
-    "Facade",
-    "Tensile",
-    "Partners",
-    "Awards & Certificates",
-    "Clients",
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Projects", href: "/projects" },
+    { label: "Partners", href: "/partners" },
+    // { label: "Awards & Certificates", href: "/awards" },
+    // { label: "Clients", href: "/clients" },
   ];
 
   return (
@@ -60,10 +59,10 @@ export default function Header() {
 
         {/* Right: Desktop Links */}
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          {navItems.map((item) => (
-            <NavbarItem key={item}>
-              <Link color="foreground" href="#">
-                {item}
+          {navItems.map(({ label, href }) => (
+            <NavbarItem key={label}>
+              <Link color="foreground" href={href}>
+                {label}
               </Link>
             </NavbarItem>
           ))}
@@ -72,7 +71,7 @@ export default function Header() {
         {/* Contact Button */}
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
+            <Button as={Link} color="primary" href="/contact" variant="flat">
               Contact
             </Button>
           </NavbarItem>
@@ -89,13 +88,14 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="sm:hidden bg-white px-4 py-4 space-y-2 absolute top-full left-0 w-full shadow-md z-50"
           >
-            {navItems.map((item) => (
+            {navItems.map(({ label, href }) => (
               <Link
-                key={item}
-                href="#"
+                key={label}
+                href={href}
                 className="block text-black font-medium py-1"
+                onClick={() => setIsMenuOpen(false)} // close menu on click
               >
-                {item}
+                {label}
               </Link>
             ))}
           </motion.div>
