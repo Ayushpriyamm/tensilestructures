@@ -5,6 +5,9 @@ import Link from "next/link";
 import GlobalNetworkMap from "./components/GlobalNetworkMap";
 import LearnMore from "./components/card/LearMoreCard";
 import AnimatedCounter from "./components/counter/AnimatedCounter";
+import TestimonialCard from "./components/card/TestimonialCard";
+import { Button } from "@heroui/react";
+import CTASection from "./components/card/CTASection";
 
 export default function Home() {
   const services = [
@@ -23,6 +26,28 @@ export default function Home() {
       description: "Elegant pedestrian protection systems for urban environments.",
       image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=400&h=300&fit=crop&crop=faces"
     }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "Metropolitan Sports Authority",
+      quote: "TensileWorks delivered an exceptional stadium roof that perfectly balances functionality with architectural beauty.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      company: "Urban Development Corp",
+      quote: "Their walkway covers have transformed our city center. The quality and design exceeded our expectations.",
+      rating: 4
+    },
+    {
+      name: "Elena Rodriguez",
+      company: "Airport Management Inc",
+      quote: "Professional service from concept to completion. The tensile structures are both stunning and practical.",
+      rating: 5
+    },
+    
   ];
 
   return (
@@ -72,6 +97,31 @@ export default function Home() {
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">States Served</p>
       </div>
     </section>
+
+
+     {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-tensile-blue mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-tensile-gray">Trusted by industry leaders worldwide</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+             <TestimonialCard key={index} name={testimonial.name} company={testimonial.company} quote={testimonial.quote} rating={testimonial.rating} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* CTA Section */}
+      <div className="">
+        <CTASection/>
+      </div>
+
+
 
       {/* AOUT US CONTENT */}
       {/* <div className="flex flex-col sm:flex-col p-2 sm:p-4 space-y-2 sm:space-y-4">

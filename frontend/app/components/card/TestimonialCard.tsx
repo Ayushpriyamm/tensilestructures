@@ -1,18 +1,19 @@
 'use client'
-
 import { Card, CardHeader, CardBody, Image, CardFooter } from "@heroui/react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export interface LearnMoreInterface {
-    title: string,
-    description: string,
-    image: string
+    name: string,
+    company: string,
+    quote: string,
+    rating: any
 }
+
 
 const MotionCard = motion(Card);
 
-export default function LearnMore({ title, description, image }: LearnMoreInterface) {
+export default function TestimonialCard({ name, company, quote, rating }: LearnMoreInterface) {
     return (
         <MotionCard
             isFooterBlurred
@@ -32,40 +33,24 @@ export default function LearnMore({ title, description, image }: LearnMoreInterf
             viewport={{ once: false }}
         >
             <CardBody className="overflow-visible py-2 px-4">
-                <Image
-                    alt="Card background"
-                    className="object-cover rounded-xl shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
-                    src={image}
-                    width={270}
-                    height={180}
-                />
+                <div className="flex mb-4">
+                    {[...Array(rating)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                    ))}
+                </div>
             </CardBody>
 
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-semibold text-xl text-[#1e1e1e] tracking-tight">
-                    {title}
+                    {name}
                 </h4>
-                <small className="text-[#666666] text-sm mt-1">{description}</small>
+                <small className="text-[#666666] text-sm mt-1">{company}</small>
             </CardHeader>
 
             <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
-                <Link
-                    href="/services"
-                    className="text-tensile-copper hover:text-tensile-copper-light font-medium inline-flex items-center group"
-                >
-                    Learn More
-                    <svg
-                        className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                    >
-                        <path
-                            fillRule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                        />
-                    </svg>
-                </Link>
+                <small className="text-[#666666] text-sm mt-1">{quote}</small>
             </CardFooter>
         </MotionCard>
     );

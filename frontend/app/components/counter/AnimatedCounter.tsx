@@ -1,4 +1,5 @@
 // components/AnimatedCounter.tsx
+'use client'
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -21,7 +22,7 @@ export default function AnimatedCounter({ end, suffix = "", duration = 2 }: Anim
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      
+
       className="text-4xl font-bold text-[#1e1e1e] dark:text-[#ededed]"
     >
       {inView && <CountUp end={end} duration={duration} suffix={suffix} />}
