@@ -36,7 +36,7 @@ export default function Header() {
   ];
 
   return (
-    <Navbar isBordered className="w-full p-4 relative z-50">
+    <Navbar isBordered className="w-full p-4 relative z-50 ">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-4">
         {/* Left: Mobile Toggle */}
         <div className="sm:hidden">
