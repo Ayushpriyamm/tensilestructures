@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand Info */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Tensile Structures</h2>
+            <h2 className="text-2xl font-semibold mb-3">DIVINAM STRUCTURAY</h2>
             <p className="text-sm text-gray-600 max-w-xs leading-relaxed">
               Engineering elegance with fabric & steel. We design and build beautiful, durable tensile structures.
             </p>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 pt-6 mt-6 text-center">
           <p className="text-sm text-gray-500">
-            &copy; 2024 TensileWorks. All rights reserved.
+            &copy; 2025 DIVINAM STRUCTURAY. All rights reserved.
           </p>
           <p className="text-sm text-gray-400 mt-2">
             Designed & Developed by{" "}
