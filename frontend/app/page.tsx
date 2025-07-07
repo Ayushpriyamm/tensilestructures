@@ -8,6 +8,8 @@ import AnimatedCounter from "./components/counter/AnimatedCounter";
 import TestimonialCard from "./components/card/TestimonialCard";
 import { Button } from "@heroui/react";
 import CTASection from "./components/card/CTASection";
+import PatronsCarousel from "./components/carousel/PatronCarousel"
+import { motion } from 'framer-motion'
 
 export default function Home() {
   const services = [
@@ -30,24 +32,24 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Metropolitan Sports Authority",
-      quote: "TensileWorks delivered an exceptional stadium roof that perfectly balances functionality with architectural beauty.",
+      name: "Ananya Mehta",
+      company: "Chief Design Officer, DLF ",
+      quote: "Divinam structures delivered an exceptional stadium roof that perfectly balances functionality with architectural beauty.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "Urban Development Corp",
+      name: "Amit Rao",
+      company: "Manager – Real Estate & Facilities, Wipro Limited",
       quote: "Their walkway covers have transformed our city center. The quality and design exceeded our expectations.",
       rating: 4
     },
     {
-      name: "Elena Rodriguez",
-      company: "Airport Management Inc",
+      name: "Rhea Kapoor",
+      company: "Rhea Kapoor",
       quote: "Professional service from concept to completion. The tensile structures are both stunning and practical.",
       rating: 5
     },
-    
+
   ];
 
   return (
@@ -79,28 +81,34 @@ export default function Home() {
       </div>
 
 
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 text-center bg-[#f5f5f4] dark:bg-[#0a0a0a]">
-      <div>
-        <AnimatedCounter end={50} suffix="+" />
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
-      </div>
-      <div>
-        <AnimatedCounter end={20} suffix="+" />
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
-      </div>
-      <div>
-        <AnimatedCounter end={99} suffix="%" />
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</p>
-      </div>
-      <div>
-        <AnimatedCounter end={10} suffix="+" />
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">States Served</p>
-      </div>
-    </section>
+      <motion.div
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 text-center bg-[#f5f5f4] dark:bg-[#0a0a0a]"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <div>
+          <AnimatedCounter end={50} suffix="+" />
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
+        </div>
+        <div>
+          <AnimatedCounter end={20} suffix="+" />
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+        </div>
+        <div>
+          <AnimatedCounter end={99} suffix="%" />
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</p>
+        </div>
+        <div>
+          <AnimatedCounter end={10} suffix="+" />
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">States Served</p>
+        </div>
+      </motion.div>
 
 
-     {/* Testimonials Section */}
-      <section className="py-20">
+      {/* Testimonials Section */}
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-tensile-blue mb-4">What Our Clients Say</h2>
@@ -109,7 +117,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-             <TestimonialCard key={index} name={testimonial.name} company={testimonial.company} quote={testimonial.quote} rating={testimonial.rating} />
+              <TestimonialCard key={index} name={testimonial.name} company={testimonial.company} quote={testimonial.quote} rating={testimonial.rating} />
             ))}
           </div>
         </div>
@@ -117,9 +125,26 @@ export default function Home() {
 
 
       {/* CTA Section */}
-      <div className="">
-        <CTASection/>
-      </div>
+      <motion.div
+        className="py-10"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <CTASection />
+      </motion.div>
+
+      {/* Patrons Carousel with animation */}
+      <motion.div
+        className="py-10"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <PatronsCarousel />
+      </motion.div>
 
 
 
