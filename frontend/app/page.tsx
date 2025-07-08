@@ -10,6 +10,7 @@ import { Button } from "@heroui/react";
 import CTASection from "./components/card/CTASection";
 import PatronsCarousel from "./components/carousel/PatronCarousel"
 import { motion } from 'framer-motion'
+import QuoteForm from "./components/QuoteForm";
 
 export default function Home() {
   const services = [
@@ -130,7 +131,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <CTASection />
       </motion.div>
@@ -141,9 +142,23 @@ export default function Home() {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <PatronsCarousel />
+      </motion.div>
+
+      <motion.div initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="flex items-center  justify-center py-10 px-4 sm:px-8 lg:px-0 bg-gradient-to-br from-gray-200 to-white"
+      >
+        <div className="w-1/3 aspect-[3/5] hidden sm:block   ">
+            <img src="/images/tensile8.png" alt="" className="h-full w-auto object-cover rounded-2xl" />
+        </div>
+        <div className="">
+          <QuoteForm />
+        </div>
       </motion.div>
 
 
