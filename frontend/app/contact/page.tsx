@@ -1,11 +1,14 @@
+'use client'
+import HeroCard from "../components/card/HeroCard";
+
 export default function ContactPgae() {
   return (
-    <div className="p-8 min-h-screen">
-      <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-      <p className="text-lg">
-        We are a leading tensile structure design and engineering company
-        committed to innovation and durability.
-      </p>
+    <div className=" min-h-screen">
+      <HeroCard
+        bgImg='/images/tensile4.jpg'
+        heading="Contact Us"
+        subheading="Get in touch with our expert team to explore durable, innovative tensile structure solutions tailored to your vision."
+      />
     </div>
   );
 }
