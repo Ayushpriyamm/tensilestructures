@@ -36,7 +36,7 @@ export default function CTASection() {
 
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link href="/contact">
-                            <Button className="bg-tensile-copper text-white text-lg px-8 py-4 hover:bg-tensile-copper-light shadow-lg cursor-pointer">
+                            <Button className="bg-black text-white text-lg px-8 py-4 hover:bg-tensile-copper-light shadow-lg cursor-pointer">
                                 Start Your Project
                             </Button>
                         </Link>
