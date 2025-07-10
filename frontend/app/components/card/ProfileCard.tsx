@@ -30,7 +30,7 @@ export default function ProfileCard({image,name,role,bio}:ProfileCardInterface) 
             </div>
             <div className="text-center">
                <h3 className="text-xl font-semibold text-tensile-blue mb-2">{name}</h3>
-                  <p className=" text-lg font-bold  mb-3">{role}</p>
+                  <p className=" text-lg font-bold    mb-3">{role}</p>
                   <p className="">{bio}</p>
             </div>
         </MotionCard>
