@@ -1,5 +1,4 @@
 'use client'
-import { title } from "process";
 import HeroCard from "../components/card/HeroCard";
 import Values from "../components/card/ValuesCard";
 import VisMisCard from "../components/card/VisMisCard";

@@ -39,11 +39,11 @@ export default function HeroCarousel() {
         loop={true}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        className="w-full h-[80vh] md:h-[90vh]"
+        className="w-full h-screen"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-[80vh] md:h-[90vh]">
+            <div className="relative w-full h-screen">
               {/* Responsive background image */}
               <div
                 className="absolute inset-0 bg-center bg-cover bg-no-repeat"

@@ -16,7 +16,7 @@ export const AcmeLogo = () => (
     <path
       clipRule="evenodd"
       d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
+      fill="white"
       fillRule="evenodd"
     />
   </svg>
@@ -36,32 +36,32 @@ export default function Header() {
   ];
 
   return (
-    <Navbar isBordered className="w-full p-4 relative z-50 ">
+    <Navbar  className="w-full p-4 absolute top-0 left-0 z-50 backdrop-blur-md ">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-4">
         {/* Left: Mobile Toggle */}
-        <div className="sm:hidden">
+        <div className="sm:hidden ">
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
           >
-            <AlignJustify className="w-6 h-6" />
+            <AlignJustify className="w-6 h-6 text-white" />
           </button>
         </div>
 
         {/* Center: Logo */}
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold hidden sm:block text-inherit">
+          <p className="font-bold hidden sm:block text-white">
             DIVINAM STRUCTURAY
           </p>
-          <p className="font-bold block sm:hidden text-inherit">DIVINAM</p>
+          <p className="font-bold block sm:hidden text-white">DIVINAM</p>
         </NavbarBrand>
 
         {/* Right: Desktop Links */}
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent className="hidden sm:flex gap-4 " justify="center">
           {navItems.map(({ label, href }) => (
             <NavbarItem key={label}>
-              <Link color="foreground" href={href}>
+              <Link color="foreground" className="text-white hover:text-white/70 transition duration-200 px-2" href={href}>
                 {label}
               </Link>
             </NavbarItem>
@@ -71,7 +71,7 @@ export default function Header() {
         {/* Contact Button */}
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary" href="/contact" variant="flat">
+            <Button as={Link} color="primary"  className= "text-white hover:text-white/70" href="/contact" variant="flat">
               Contact
             </Button>
           </NavbarItem>

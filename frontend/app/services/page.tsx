@@ -1,7 +1,8 @@
+'use client'
 import CTASection from "../components/card/CTASection";
 import HeroCard from "../components/card/HeroCard";
 import ServiceCard from "../components/card/ServicesCard";
-import { motion } from 'framer-motion'
+
 
 const services = [
   {

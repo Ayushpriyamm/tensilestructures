@@ -12,7 +12,7 @@ export interface HeroCardInterface{
 export default function HeroCard({heading,subheading,bgImg}:HeroCardInterface) {
   return (
     <motion.div
-      className="relative bg-cover bg-center p-10 shadow-2xl overflow-hidden"
+      className="relative bg-cover bg-center p-10 shadow-2xl overflow-hidden "
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* Overlay */}
@@ -20,7 +20,7 @@ export default function HeroCard({heading,subheading,bgImg}:HeroCardInterface) {
 
       {/* Text Content with Animation */}
       <motion.div
-        className="relative z-10 flex flex-col text-center text-white p-4 sm:p-8 space-y-2 sm:space-y-8"
+        className="relative z-10 flex flex-col text-center text-white px-4 py-10 sm:px-8 sm:py-16 space-y-2 sm:space-y-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
