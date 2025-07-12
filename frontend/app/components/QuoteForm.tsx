@@ -171,7 +171,7 @@ const QuoteForm = () => {
                             type="submit"
                             disabled={loading}
                             className={`flex items-center justify-center gap-2 w-full rounded-md
-                          bg-neutral-900 hover:bg-neutral-800 text-white font-semibold py-3 px-8 
+                          bg-[#4169e1] hover:opacity-85 text-white font-semibold py-3 px-8 
                           shadow-md hover:shadow-xl cursor-pointer transition-all duration-300
                           ${loading ? "opacity-60 cursor-not-allowed" : ""}`}
                         >

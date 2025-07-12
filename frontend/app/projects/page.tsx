@@ -66,7 +66,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <HeroCard
-        bgImg="/images/tensile4.jpg"
+        bgImg="/images/t1.png"
         heading="Our Projects"
         subheading="Get in touch with our expert team to explore durable, innovative tensile structure solutions tailored to your vision."
       />
@@ -81,8 +81,8 @@ export default function Projects() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setFilter(category)}
               className={`rounded-lg text-sm font-medium px-4 py-2 border ${filter === category
-                  ? 'bg-black text-white'
-                  : 'border-black text-black hover:bg-black hover:text-white'
+                  ? 'bg-[#4169e1] text-white'
+                  : 'border-black text-black hover:bg-[#4169e1] hover:text-white'
                 }`}
               variant="ghost"
             >
@@ -138,7 +138,7 @@ export default function Projects() {
                   {project.location}
                 </p>
                 <p className="text-sm text-gray-600">{project.description}</p>
-                <Button variant="bordered" className="w-full rounded-lg bg-black text-white text-lg px-4 py-2 hover:bg-black/90  shadow-lg cursor-pointer">
+                <Button variant="bordered" className="w-full rounded-lg bg-[#4169e1] text-white text-lg px-4 py-2 hover:bg-black/90  shadow-lg cursor-pointer">
                   View Details
                 </Button>
               </div>

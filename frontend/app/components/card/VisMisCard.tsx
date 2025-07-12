@@ -30,7 +30,7 @@ export default function VisMisCard({ logo, title, description }: VisMisInterface
         >
 
             <CardBody className="text-2xl font-bold flex flex-col space-y-4">
-                <div className="rounded-xl p-4 bg-emerald-500 w-max">
+                <div className="rounded-xl p-4 bg-[#4169e1] w-max">
                     {logo}
                 </div>
                 <h1>{title}</h1>

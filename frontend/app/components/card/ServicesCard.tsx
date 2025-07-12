@@ -54,8 +54,8 @@ export default function ServiceCard({ service, index }: { service: any; index: n
                     ))}
                 </ul>
 
-                <Button className="w-full rounded-md bg-neutral-900 hover:bg-neutral-800 text-white font-semibold py-3 px-8 
-                          shadow-md hover:shadow-xl hover:opacity-95 cursor-pointer transition-all duration-300">
+                <Button className="w-full rounded-md bg-[#4169e1]  text-white font-semibold py-3 px-8 
+                          shadow-md hover:shadow-xl hover:opacity-85 cursor-pointer transition-all duration-300">
                     <Link href="/contact">Get Quote</Link>
                 </Button>
             </div>

@@ -30,7 +30,7 @@ export default function Header() {
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
-    { label: "Partners", href: "/partners" },
+    // { label: "Partners", href: "/partners" },
     // { label: "Awards & Certificates", href: "/awards" },
     // { label: "Clients", href: "/clients" },
   ];
@@ -49,13 +49,15 @@ export default function Header() {
         </div>
 
         {/* Center: Logo */}
-        <NavbarBrand>
+        <Link href="/">
+          <NavbarBrand>
           <AcmeLogo />
           <p className="font-bold hidden sm:block text-white">
             DIVINAM STRUCTURAY
           </p>
           <p className="font-bold block sm:hidden text-white">DIVINAM</p>
         </NavbarBrand>
+        </Link>
 
         {/* Right: Desktop Links */}
         <NavbarContent className="hidden sm:flex gap-4 " justify="center">

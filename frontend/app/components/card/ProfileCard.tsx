@@ -13,7 +13,7 @@ export default function ProfileCard({image,name,role,bio}:ProfileCardInterface) 
     const MotionCard = motion(Card);
     return (
         <MotionCard
-            className="bg-gradient-to-br shadow-2xl from-[#f5f5f4] to-white opacity-80  rounded-2xl hover:shadow-[0_20px_30px_-10px_rgba(0,0,0,0.2)] px-8 py-4 sm:px-16 sm:py-8"
+            className="bg-gradient-to-br shadow-2xl from-[#f5f5f4] to-white opacity-80  rounded-2xl hover:shadow-[0_20px_30px_-10px_rgba(0,0,0,0.2)] px-8 py-4 sm:px-2 sm:py-4"
             initial={{ opacity: 0, y: 40, rotateX: -5 }}
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
             whileHover={{

@@ -6,7 +6,6 @@ import GlobalNetworkMap from "./components/GlobalNetworkMap";
 import LearnMore from "./components/card/LearMoreCard";
 import AnimatedCounter from "./components/counter/AnimatedCounter";
 import TestimonialCard from "./components/card/TestimonialCard";
-import { Button } from "@heroui/react";
 import CTASection from "./components/card/CTASection";
 import PatronsCarousel from "./components/carousel/PatronCarousel"
 import { motion } from 'framer-motion'
@@ -15,20 +14,26 @@ import QuoteForm from "./components/QuoteForm";
 export default function Home() {
   const services = [
     {
-      title: "Stadium Roofs",
-      description: "Large-span tensile roofing systems for sports venues and entertainment facilities.",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop&crop=faces"
-    },
-    {
-      title: "Car Parking Shades",
-      description: "Durable and weather-resistant parking structures with modern design.",
-      image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop&crop=faces"
-    },
-    {
-      title: "Walkway Covers",
-      description: "Elegant pedestrian protection systems for urban environments.",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=400&h=300&fit=crop&crop=faces"
-    }
+    title: "Designing",
+    description: "Architectural tensile designs that balance creativity and constructability using cutting-edge software and expert analysis.",
+    
+    image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&h=400&fit=crop&crop=faces",
+    icon: "🖌️"
+  },
+  {
+    title: "Engineering",
+    description: "Robust structural engineering tailored for tensile architecture, built to endure extreme wind, snow, and dynamic forces.",
+    
+    image: "https://plus.unsplash.com/premium_photo-1661963236181-9eb0c8d766e3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZW5naW5lZXJpbmd8ZW58MHx8MHx8fDA%3D",
+    icon: "📐"
+  },
+  {
+    title: "Application",
+    description: "Expert on-site installation of tensile structures in complex environments across the globe, ensuring safety and precision.",
+    
+    image: "https://media.istockphoto.com/id/473683922/photo/civil-engineers-looking-at-blueprints.webp?a=1&b=1&s=612x612&w=0&k=20&c=BSPuQ3vCwKWQvuWe8a_TeHAkjnSqpESwdmW-rQ08UN4=",
+    icon: "🏗️"
+  }
   ];
 
   const testimonials = [
@@ -83,7 +88,7 @@ export default function Home() {
 
 
       <motion.div
-        className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 text-center bg-[#f5f5f4] dark:bg-[#0a0a0a]"
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 text-center bg-[#4169e1]"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -91,19 +96,19 @@ export default function Home() {
       >
         <div>
           <AnimatedCounter end={50} suffix="+" />
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
+          <p className="mt-1 text-sm text-white">Projects Completed</p>
         </div>
         <div>
           <AnimatedCounter end={20} suffix="+" />
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+          <p className="mt-1 text-sm text-white">Years Experience</p>
         </div>
         <div>
           <AnimatedCounter end={99} suffix="%" />
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</p>
+          <p className="mt-1 text-sm text-white">Client Satisfaction</p>
         </div>
         <div>
           <AnimatedCounter end={10} suffix="+" />
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">States Served</p>
+          <p className="mt-1 text-sm text-white">States Served</p>
         </div>
       </motion.div>
 

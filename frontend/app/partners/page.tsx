@@ -7,7 +7,7 @@ export default function PartnersPage() {
 
      <div className=" min-h-screen">
               <HeroCard
-                bgImg='/images/tensile6.jpg'
+                bgImg='/images/t3.png'
                 heading="Our Partners"
                 subheading="We are a leading tensile structure design and engineering company committed to innovation and durability."
               />

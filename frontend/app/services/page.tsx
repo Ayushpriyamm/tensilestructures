@@ -6,48 +6,43 @@ import ServiceCard from "../components/card/ServicesCard";
 
 const services = [
   {
-    title: "Stadium Roofs",
-    description: "Large-span tensile roofing systems designed for sports venues, entertainment facilities, and arenas. Our stadium roofs combine structural integrity with aesthetic appeal.",
-    features: ["Weather-resistant materials", "Large span capabilities", "Acoustic optimization", "Energy efficiency"],
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop&crop=faces",
-    icon: "🏟️"
-  },
-  {
-    title: "Car Parking Shades",
-    description: "Durable and cost-effective parking shade structures that provide protection from sun and weather while enhancing the aesthetic appeal of parking areas.",
-    features: ["UV protection", "Weather durability", "Easy maintenance", "Custom designs"],
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&crop=faces",
-    icon: "🚗"
-  },
-  {
-    title: "Walkway Covers",
-    description: "Elegant pedestrian protection systems that seamlessly integrate with urban environments while providing weather protection and architectural interest.",
-    features: ["Pedestrian safety", "Weather protection", "Architectural integration", "Low maintenance"],
-    image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop&crop=faces",
-    icon: "🚶"
-  },
-  {
-    title: "Architectural Membranes",
-    description: "Custom membrane structures for unique architectural applications, including facades, canopies, and artistic installations that push design boundaries.",
-    features: ["Custom fabrication", "Artistic freedom", "Structural innovation", "Material variety"],
+    title: "Designing",
+    description: "Architectural tensile designs that balance creativity and constructability using cutting-edge software and expert analysis.",
+    features: [
+      "Form finding precision",
+      "Finite Element Analysis (FEA)",
+      "Custom patterning solutions",
+      "Integrated rainwater analysis"
+    ],
     image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&h=400&fit=crop&crop=faces",
-    icon: "🎨"
+    icon: "🖌️"
   },
   {
-    title: "Amphitheater Covers",
-    description: "Specialized acoustic and weather protection solutions for outdoor performance venues, combining superior sound quality with weather resistance.",
-    features: ["Acoustic engineering", "Weather protection", "Audience comfort", "Stage integration"],
-    image: "https://images.unsplash.com/photo-1439337153520-7082a56a81f4?w=600&h=400&fit=crop&crop=faces",
-    icon: "🎭"
+    title: "Engineering",
+    description: "Robust structural engineering tailored for tensile architecture, built to endure extreme wind, snow, and dynamic forces.",
+    features: [
+      "Wind & snow load resistance",
+      "Advanced structural modeling",
+      "Fabric performance optimization",
+      "Code-compliant safety standards"
+    ],
+    image: "https://plus.unsplash.com/premium_photo-1661963236181-9eb0c8d766e3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZW5naW5lZXJpbmd8ZW58MHx8MHx8fDA%3D",
+    icon: "📐"
   },
   {
-    title: "Swimming Pool Enclosures",
-    description: "Retractable and permanent pool covers that extend swimming seasons while reducing maintenance costs and improving safety.",
-    features: ["Season extension", "Safety enhancement", "Energy savings", "Retractable options"],
-    image: "https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?w=600&h=400&fit=crop&crop=faces",
-    icon: "🏊"
+    title: "Application",
+    description: "Expert on-site installation of tensile structures in complex environments across the globe, ensuring safety and precision.",
+    features: [
+      "Confined space installations",
+      "Multi-crane lift coordination",
+      "Global deployment capability",
+      "Safe handover procedures"
+    ],
+    image: "https://media.istockphoto.com/id/473683922/photo/civil-engineers-looking-at-blueprints.webp?a=1&b=1&s=612x612&w=0&k=20&c=BSPuQ3vCwKWQvuWe8a_TeHAkjnSqpESwdmW-rQ08UN4=",
+    icon: "🏗️"
   }
 ];
+
 
 
 export default function ServicesPage() {
@@ -58,7 +53,7 @@ export default function ServicesPage() {
       <HeroCard
         heading="Our Services"
         subheading=" We are a leading tensile structure design and engineering company committed to innovation and durability."
-        bgImg="/images/tensile4.jpg"
+        bgImg="/images/t5.png"
       />
 
 

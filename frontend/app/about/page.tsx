@@ -12,6 +12,13 @@ const members = [
     role: "CEO",
     bio: "With a visionary approach and deep industry insight, Umang Sethi leads the company as CEO. He is passionate about pushing boundaries in tensile architecture and driving innovation across all fronts."
   },
+  
+  {
+    image: "/images/ks.jpg",
+    name: "KS Tiwari",
+    role: "CFO",
+    bio: "KS Tiwari oversees the company’s financial health with strategic foresight. As CFO, he manages budgets, optimizes investments, and ensures sustainable growth through sound financial planning."
+  },
   {
     image: "/images/khushi.jpg",
     name: "Khushi Singh",
@@ -19,10 +26,10 @@ const members = [
     bio: "Khushi Singh ensures seamless execution of all projects and operational workflows. With a detail-oriented mindset, she bridges teams and timelines to deliver excellence at every stage."
   },
   {
-    image: "/images/ks.jpg",
-    name: "KS Tiwari",
-    role: "CFO",
-    bio: "KS Tiwari oversees the company’s financial health with strategic foresight. As CFO, he manages budgets, optimizes investments, and ensures sustainable growth through sound financial planning."
+    image: "/images/khushNawaz.jpeg",
+    name: "Khush Nawaj",
+    role: "Production",
+    bio: "Khush Nawaz plays a pivotal role in managing on-ground production with precision and efficiency. With a hands-on approach and deep technical knowledge, he ensures that every tensile structure is built to the highest standards of quality and durability."
   }
 ];
 
@@ -35,7 +42,7 @@ export default function AboutPage() {
         heading="About Us"
         subheading="We are a leading tensile structure design and engineering company
         committed to innovation and durability."
-        bgImg="/images/tensile8.png"
+        bgImg="/images/t3.png"
       />
 
       {/*Our Story*/}
@@ -59,7 +66,7 @@ export default function AboutPage() {
             alt="Modern tensile structure"
             className="rounded-lg shadow-lg"
           />
-          <div className="absolute bg-emerald-700 -bottom-8 -right-4 w-24 h-24 bg-tensile-copper rounded-full flex flex-col items-center justify-center">
+          <div className="absolute bg-[#4169e1] -bottom-8 -right-4 w-24 h-24 bg-tensile-copper rounded-full flex flex-col items-center justify-center">
             <span className="text-white font-bold text-lg ">15+</span>
             <h1 className="text-xs text-center  text-white">years of experience</h1>
           </div>
@@ -68,9 +75,9 @@ export default function AboutPage() {
 
       {/*Our Mission Vison*/}
       <div className=" flex flex-col sm:flex-row justify-center gap-10 py-10 sm:py-20 px-4 sm:px-6 ">
-        <VisMisCard logo={<Check />} title="Mission" description="To design and deliver exceptional tensile structures that combine aesthetics, performance, and practicality—empowering spaces to become more functional, adaptable, and visually striking.We are committed to providing cost-effective, eco-conscious, and innovative solutions that exceed expectations and transform architectural landscapes across industries."
+        <VisMisCard logo={<Check color="white" />} title="Mission" description="To design and deliver exceptional tensile structures that combine aesthetics, performance, and practicality—empowering spaces to become more functional, adaptable, and visually striking.We are committed to providing cost-effective, eco-conscious, and innovative solutions that exceed expectations and transform architectural landscapes across industries."
         />
-        <VisMisCard logo={<Eye />} title="Vision" description="To be recognized as a leading force in tensile architecture, known for shaping iconic structures that span possibilities—literally and figuratively.We aim to set new standards in design adaptability, structural elegance, and sustainable construction, making Divinam Structuray a name synonymous with architectural brilliance and engineering trust." />
+        <VisMisCard logo={<Eye color="white" />} title="Vision" description="To be recognized as a leading force in tensile architecture, known for shaping iconic structures that span possibilities—literally and figuratively.We aim to set new standards in design adaptability, structural elegance, and sustainable construction, making Divinam Structuray a name synonymous with architectural brilliance and engineering trust." />
 
       </div>
 
@@ -93,7 +100,7 @@ export default function AboutPage() {
           <h2 className="text-4xl font-bold ">Leadership Team</h2>
           <p className="text-xl ">Meet the experts behind our success</p>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center gap-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
           {members.map((member, index) => (
             <ProfileCard key={index} image={member.image} name={member.name} role={member.role} bio={member.bio} ></ProfileCard>
           ))}

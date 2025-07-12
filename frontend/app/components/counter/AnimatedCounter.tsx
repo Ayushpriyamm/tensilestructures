@@ -23,7 +23,7 @@ export default function AnimatedCounter({ end, suffix = "", duration = 2 }: Anim
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
 
-      className="text-4xl font-bold text-[#1e1e1e] dark:text-[#ededed]"
+      className="text-4xl font-bold text-[#ededed]"
     >
       {inView && <CountUp end={end} duration={duration} suffix={suffix} />}
     </motion.div>
