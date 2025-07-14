@@ -82,12 +82,12 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col space-y-2 text-sm text-gray-600">
-              <Link href="/privacy" className="hover:underline text-[#f5f5f4] hover:text-white">
+{/*               <Link href="/privacy" className="hover:underline text-[#f5f5f4] hover:text-white">
                 Privacy Policy
               </Link>
               <Link href="/terms" className="hover:underline text-[#f5f5f4] hover:text-white">
                 Terms of Service
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
