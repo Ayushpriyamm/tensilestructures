@@ -5,16 +5,16 @@ import CTASection from "@/app/components/card/CTASection";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    slug: project.slug,
+    id: project.id,
   }));
 }
 
 export default async function ProjectDetail({
   params,
 }: {
-  params: { slug: string };
+  params: { id: string };
 }) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.id === params.id);
 
   if (!project) return notFound();
 

@@ -90,7 +90,7 @@ export default function Projects() {
                   {project.location}
                 </p>
                 <p className="text-sm text-gray-600">{project.description}</p>
-                <Link href={`/projects/${project.slug}`}>
+                <Link href={`/projects/${project.id}`}>
                   <Button className="w-full rounded-lg bg-[#4169e1] text-white text-lg px-4 py-2 hover:opacity-85 shadow-lg cursor-pointer">
                     View Details
                   </Button>
