@@ -4,60 +4,12 @@ import HeroCard from '../components/card/HeroCard';
 import { useState } from 'react';
 import { Card, Button } from '@heroui/react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { projects } from "@/app/lib/projectData";
+import { categories } from '@/app/lib/projectData';
 
 const MotionCard = motion(Card);
 const MotionButton = motion(Button);
-
-const projects = [
-  {
-    title: 'Olympic Stadium Roof',
-    location: 'Tokyo, Japan',
-    category: 'Stadium Roofs',
-    year: '2023',
-    description:
-      'Massive tensile roof covering for the main Olympic stadium with integrated lighting and ventilation systems.',
-    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop&crop=faces',
-    size: '15,000 m²',
-  },
-  {
-    title: 'Corporate Parking Canopy',
-    location: 'Dubai, UAE',
-    category: 'Car Parking Shades',
-    year: '2023',
-    description:
-      'Large-scale parking shade structure providing coverage for 500+ vehicles with solar panel integration.',
-    image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop&crop=faces',
-    size: '8,500 m²',
-  },
-  {
-    title: 'Airport Terminal Walkway',
-    location: 'Singapore',
-    category: 'Walkway Covers',
-    year: '2022',
-    description:
-      'Elegant curved walkway connecting terminal buildings with climate control and natural lighting.',
-    image: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop&crop=faces',
-    size: '2,200 m²',
-  },
-  {
-    title: 'Art Museum Facade',
-    location: 'New York, USA',
-    category: 'Architectural Membranes',
-    year: '2022',
-    description:
-      'Dynamic facade system that changes with lighting conditions while providing weather protection.',
-    image: 'https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&h=400&fit=crop&crop=faces',
-    size: '3,800 m²',
-  },
-];
-
-const categories = [
-  'All',
-  'Stadium Roofs',
-  'Car Parking Shades',
-  'Walkway Covers',
-  'Architectural Membranes',
-];
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');
@@ -81,8 +33,8 @@ export default function Projects() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setFilter(category)}
               className={`rounded-lg text-sm font-medium px-4 py-2 border ${filter === category
-                  ? 'bg-[#4169e1] text-white'
-                  : 'border-black text-black hover:bg-[#4169e1] hover:text-white'
+                ? 'bg-[#4169e1] text-white'
+                : 'border-black text-black hover:bg-[#4169e1] hover:text-white'
                 }`}
               variant="ghost"
             >
@@ -114,9 +66,9 @@ export default function Projects() {
                 <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 text-xs rounded-full">
                   {project.year}
                 </div>
-                <div className="absolute bottom-3 left-3 bg-white text-blue-800 px-3 py-1 text-xs rounded-full shadow">
+                {/* <div className="absolute bottom-3 left-3 bg-white text-blue-800 px-3 py-1 text-xs rounded-full shadow">
                   {project.size}
-                </div>
+                </div> */}
               </div>
               <div className="p-4 space-y-2">
                 <div className="text-xs bg-blue-100 text-blue-700 w-fit px-2 py-1 rounded-full">
@@ -138,9 +90,11 @@ export default function Projects() {
                   {project.location}
                 </p>
                 <p className="text-sm text-gray-600">{project.description}</p>
-                <Button variant="bordered" className="w-full rounded-lg bg-[#4169e1] text-white text-lg px-4 py-2 hover:bg-black/90  shadow-lg cursor-pointer">
-                  View Details
-                </Button>
+                <Link href={`/projects/${project.slug}`}>
+                  <Button className="w-full rounded-lg bg-[#4169e1] text-white text-lg px-4 py-2 hover:opacity-85 shadow-lg cursor-pointer">
+                    View Details
+                  </Button>
+                </Link>
               </div>
             </MotionCard>
           ))}
