@@ -1,6 +1,6 @@
 export const projects = [
     {
-        id: 'air-jaipur',
+        slug: 'air-jaipur',
         title: 'Air',
         location: 'Jaipur',
         category: 'Facade Systems',
@@ -14,7 +14,7 @@ export const projects = [
         size: '3,800 m²',
     },
     {
-        id: 'canonical-central-park',
+        slug: 'canonical-central-park',
         title: 'Canonical',
         location: 'Central Park',
         category: 'Canopy',
@@ -28,7 +28,7 @@ export const projects = [
         size: '15,000 m²',
     },
     {
-        id: 'canopy-jaipur',
+        slug: 'canopy-jaipur',
         title: 'Canopy',
         location: 'Jaipur',
         category: 'Canopy',
@@ -42,7 +42,7 @@ export const projects = [
         size: '8,500 m²',
     },
     {
-        id: 'car-park-delhi',
+        slug: 'car-park-delhi',
         title: 'Car Park',
         location: 'Delhi',
         category: 'Car Parking Shades',
@@ -56,7 +56,7 @@ export const projects = [
         size: '2,200 m²',
     },
     {
-        id: 'farm-house-delhi',
+        slug: 'farm-house-delhi',
         title: 'Farm House',
         location: 'Delhi',
         category: 'Tensile Gazebos',
@@ -70,7 +70,7 @@ export const projects = [
         size: '3,800 m²',
     },
     {
-        id: 'pool-canopy-bangalore',
+        slug: 'pool-canopy-bangalore',
         title: 'Pool Canopy',
         location: 'Bangalore',
         category: 'Poolside Shades',
@@ -84,7 +84,7 @@ export const projects = [
         size: '3,800 m²',
     },
     {
-        id: 'luxury-tents-ailila-rajasthan',
+        slug: 'luxury-tents-ailila-rajasthan',
         title: 'Luxury Tents Ailila',
         location: 'Rajasthan',
         category: 'Resort Tents',
@@ -98,7 +98,7 @@ export const projects = [
         size: '3,800 m²',
     },
     {
-        id: 'walkway-barmer',
+        slug: 'walkway-barmer',
         title: 'WalkWay',
         location: 'Barmer',
         category: 'Walkway Covers',
@@ -112,7 +112,7 @@ export const projects = [
         size: '3,800 m²',
     },
     {
-        id: 'walkway-hyderabad',
+        slug: 'walkway-hyderabad',
         title: 'WalkWay',
         location: 'Hyderabad',
         category: 'Walkway Covers',

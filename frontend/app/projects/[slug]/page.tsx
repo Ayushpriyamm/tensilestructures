@@ -1,20 +1,19 @@
+// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import { projects } from "@/app/lib/projectData";
 import HeroCard from "@/app/components/card/HeroCard";
 import CTASection from "@/app/components/card/CTASection";
 
+// Statically generate paths for all projects
 export async function generateStaticParams() {
   return projects.map((project) => ({
-    id: project.id,
+    slug: project.slug,
   }));
 }
 
-export default async function ProjectDetail({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const project = projects.find((p) => p.id === params.id);
+// Correct type and implementation (no Promise)
+export default async function ProjectDetail({ params }: { params: { slug: string } }) {
+  const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) return notFound();
 
