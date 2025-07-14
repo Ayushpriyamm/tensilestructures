@@ -9,21 +9,33 @@ export async function generateStaticParams() {
     return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
+interface PageProps {
+    params: {
+        slug: string;
+    };
+}
+
+export default function ProjectDetail({ params }: PageProps) {
     const project = projects.find((p) => p.slug === params.slug);
 
     if (!project) return notFound();
 
     return (
         <div className="min-h-screen ">
-
-            <HeroCard heading={project.title} subheading={project.description} bgImg={project.image} />
-
+            <HeroCard
+                heading={project.title}
+                subheading={project.description}
+                bgImg={project.image}
+            />
 
             <div className="main-div py-10 px-4 flex flex-col sm:flex-row justify-center gap-10 ">
                 <div className="description p-2 sm:w-1/2">{project.longDescription}</div>
-                <div className="image p-2  sm:w-1/2 ">
-                    <img src={project.image} alt="" className="rounded-lg object-cover aspect-square" />
+                <div className="image p-2 sm:w-1/2 ">
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="rounded-lg object-cover aspect-square"
+                    />
                     <p className="text-lg font-bold text-gray-500 flex items-center gap-2 p-4">
                         <svg
                             className="w-4 h-4 text-blue-500"
@@ -42,7 +54,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             </div>
 
             <CTASection />
-
         </div>
     );
 }
+
