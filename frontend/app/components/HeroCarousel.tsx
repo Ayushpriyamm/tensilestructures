@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 const slides = [
   {
@@ -67,9 +68,14 @@ export default function HeroCarousel() {
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-screen">
               {/* Background */}
-              <div
-                className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-all duration-1000"
-                style={{ backgroundImage: `url(${slide.image})` }}
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                priority={index === 0} // only preload the first one
+                placeholder="blur"
+                blurDataURL={slide.image} // optionally use a low-res version
               />
 
               {/* Overlay */}
