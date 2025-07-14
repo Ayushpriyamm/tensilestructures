@@ -1,5 +1,4 @@
-// app/projects/[slug]/page.tsx
-'use client'
+// ❌ DON'T use 'use client' here
 import { notFound } from "next/navigation";
 import { projects } from "@/app/lib/projectData";
 import HeroCard from "@/app/components/card/HeroCard";
@@ -17,7 +16,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ IMPORTANT: This must be async (because you’re calling `notFound`)
 export default async function ProjectDetail({ params }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
 
