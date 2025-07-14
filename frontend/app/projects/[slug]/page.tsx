@@ -1,14 +1,7 @@
-// ❌ DON'T use 'use client' here
 import { notFound } from "next/navigation";
 import { projects } from "@/app/lib/projectData";
 import HeroCard from "@/app/components/card/HeroCard";
 import CTASection from "@/app/components/card/CTASection";
-
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -16,7 +9,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProjectDetail({ params }: PageProps) {
+export default async function ProjectDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) return notFound();
