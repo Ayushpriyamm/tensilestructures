@@ -1,4 +1,5 @@
 "use client";
+
 import { AlignJustify } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -10,6 +11,7 @@ import {
   Button,
 } from "@heroui/react";
 import { useState } from "react";
+import { label } from "framer-motion/client";
 
 export const AcmeLogo = () => (
   <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
@@ -34,29 +36,33 @@ export default function Header() {
     // { label: "Awards & Certificates", href: "/awards" },
     // { label: "Clients", href: "/clients" },
   ];
+  const navItemsMobile = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact Us", href: "/contact" }
+    // { label: "Partners", href: "/partners" },
+    // { label: "Awards & Certificates", href: "/awards" },
+    // { label: "Clients", href: "/clients" },
+  ];
 
   return (
-    <Navbar  className="w-full p-4 absolute top-0 left-0 z-50 backdrop-blur-md ">
+    <Navbar className="w-full p-4 absolute top-0 left-0 z-50 backdrop-blur-md ">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-4">
         {/* Left: Mobile Toggle */}
-        <div className="sm:hidden ">
-          <button
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-            aria-label="Toggle menu"
-          >
-            <AlignJustify className="w-6 h-6 text-white" />
-          </button>
-        </div>
+
 
         {/* Center: Logo */}
         <Link href="/">
-          <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold hidden sm:block text-white">
-            DIVINAM STRUCTURAY
-          </p>
-          <p className="font-bold block sm:hidden text-white">DIVINAM</p>
-        </NavbarBrand>
+          <NavbarBrand className="flex items-center">
+
+            <img src="/Logo.png" alt="Brand Logo" className="w-20 " />
+            <p className="font-bold hidden sm:block text-white">
+              DIVINAM STRUCTURAY
+            </p>
+            {/* <p className="font-bold block sm:hidden text-white">DIVINAM</p> */}
+          </NavbarBrand>
         </Link>
 
         {/* Right: Desktop Links */}
@@ -73,11 +79,20 @@ export default function Header() {
         {/* Contact Button */}
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary"  className= "text-white hover:text-white/70" href="/contact" variant="flat">
+            <Button as={Link} color="primary" className="text-white hover:text-white/70 hidden sm:block" href="/contact" variant="flat">
               Contact
             </Button>
           </NavbarItem>
         </NavbarContent>
+
+        <div className="sm:hidden ">
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            <AlignJustify className="w-6 h-6 text-white" />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu (same content as desktop) */}
@@ -90,7 +105,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="sm:hidden bg-white px-4 py-4 space-y-2 absolute top-full left-0 w-full shadow-md z-50"
           >
-            {navItems.map(({ label, href }) => (
+            {navItemsMobile.map(({ label, href }) => (
               <Link
                 key={label}
                 href={href}
