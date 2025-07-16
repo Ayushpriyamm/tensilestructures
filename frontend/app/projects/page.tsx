@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <HeroCard
-        bgImg="/images/t1.png"
+        bgImg="/images/t10.avif"
         heading="Our Projects"
         subheading="Get in touch with our expert team to explore durable, innovative tensile structure solutions tailored to your vision."
       />

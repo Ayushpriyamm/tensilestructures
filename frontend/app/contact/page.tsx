@@ -31,7 +31,7 @@ export default function ContactPgae() {
   return (
     <div className=" min-h-screen">
       <HeroCard
-        bgImg='/images/t2.png'
+        bgImg='/images/t12.webp'
         heading="Contact Us"
         subheading="Get in touch with our expert team to explore durable, innovative tensile structure solutions tailored to your vision."
       />

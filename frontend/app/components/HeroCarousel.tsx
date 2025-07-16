@@ -13,35 +13,36 @@ import Image from "next/image";
 const slides = [
   {
     id: 1,
-    image: "/images/t1.png",
+    
+    image: "/images/t12.webp",
     title: "Setting the Standard in Tensile Design",
     description:
       "Pioneering the future of architectural membranes with innovation, elegance, and precision.",
   },
   {
     id: 2,
-    image: "/images/t2.png",
+    image: "/images/t14.jpg",
     title: "Where Engineering Meets Art",
     description:
       "Crafting expressive tensile forms that merge structural integrity with iconic design.",
   },
   {
     id: 3,
-    image: "/images/t3.png",
+    image: "/images/t10.avif",
     title: "Engineered to Endure",
     description:
       "All-weather performance and unmatched durability for every environment.",
   },
   {
     id: 4,
-    image: "/images/t4.png",
+    image: "/images/t15.jpg",
     title: "Designing Landmarks, Not Just Structures",
     description:
       "Creating bold, recognizable silhouettes that define skylines and spaces.",
   },
   {
     id: 5,
-    image: "/images/t5.png",
+    image: "/images/t14.jpg",
     title: "Global Expertise, Local Execution",
     description:
       "Delivering world-class tensile solutions—on time, on spec, and on budget.",

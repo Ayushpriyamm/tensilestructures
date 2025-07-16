@@ -53,7 +53,7 @@ export default function ServicesPage() {
       <HeroCard
         heading="Our Services"
         subheading=" We are a leading tensile structure design and engineering company committed to innovation and durability."
-        bgImg="/images/t5.png"
+        bgImg="/images/t14.jpg"
       />
 
 

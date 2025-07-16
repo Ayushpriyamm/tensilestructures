@@ -42,7 +42,7 @@ export default function AboutPage() {
         heading="About Us"
         subheading="We are a leading tensile structure design and engineering company
         committed to innovation and durability."
-        bgImg="/images/t3.png"
+        bgImg="/images/t10.avif"
       />
 
       {/*Our Story*/}

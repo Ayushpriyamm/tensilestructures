@@ -61,7 +61,7 @@ export default function Header() {
             <p className="font-bold hidden sm:block text-white">
               DIVINAM STRUCTURAY
             </p>
-            {/* <p className="font-bold block sm:hidden text-white">DIVINAM</p> */}
+            <p className="font-bold text-sm block sm:hidden text-white text-center">DIVINAM STRUCTURAY</p>
           </NavbarBrand>
         </Link>
 
