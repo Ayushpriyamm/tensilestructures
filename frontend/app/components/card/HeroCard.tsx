@@ -20,7 +20,7 @@ export default function HeroCard({heading,subheading,bgImg}:HeroCardInterface) {
 
       {/* Text Content with Animation */}
       <motion.div
-        className="relative z-10 flex flex-col text-center text-white px-4 py-10 sm:px-8 sm:py-16 space-y-2 sm:space-y-8"
+        className="relative z-10 flex flex-col text-center text-white px-4 py-16 sm:px-8 sm:py-16 space-y-2 sm:space-y-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

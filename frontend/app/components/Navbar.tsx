@@ -69,7 +69,7 @@ export default function Header() {
         <NavbarContent className="hidden sm:flex gap-4 " justify="center">
           {navItems.map(({ label, href }) => (
             <NavbarItem key={label}>
-              <Link color="foreground" className="text-white hover:text-white/70 transition duration-200 px-2" href={href}>
+              <Link color="foreground" className="text-white hover:text-white/70 hover:border-b-4 border-blue-900 transition duration-200 px-2" href={href}>
                 {label}
               </Link>
             </NavbarItem>
@@ -79,7 +79,7 @@ export default function Header() {
         {/* Contact Button */}
         <NavbarContent justify="end">
           <NavbarItem>
-            <Button as={Link} color="primary" className="text-white hover:text-white/70 hidden sm:block" href="/contact" variant="flat">
+            <Button as={Link} color="primary" className="text-white hover:text-white/70 hover:border-b-4 border-blue-900 hidden sm:block" href="/contact" variant="flat">
               Contact
             </Button>
           </NavbarItem>
@@ -103,13 +103,13 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="sm:hidden bg-white px-4 py-4 space-y-2 absolute top-full left-0 w-full shadow-md z-50"
+            className="sm:hidden bg-white px-4 py-4 space-y-2 absolute top-full left-0 w-full shadow-md z-50  right-0"
           >
             {navItemsMobile.map(({ label, href }) => (
               <Link
                 key={label}
                 href={href}
-                className="block text-black font-medium py-1"
+                className="block text-blue-900 border-b-1 font-medium py-1"
                 onClick={() => setIsMenuOpen(false)} // close menu on click
               >
                 {label}

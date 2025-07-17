@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { projects } from "@/app/lib/projectData";
 import HeroCard from "@/app/components/card/HeroCard";
 import CTASection from "@/app/components/card/CTASection";
+import IndustriesSection from "@/app/components/IndustriesSection";
 
 // Statically generate paths for all projects
 export async function generateStaticParams() {
@@ -33,9 +34,9 @@ export default async function ProjectDetail({ params }: { params: { slug: string
             alt={project.title}
             className="rounded-lg object-cover aspect-square"
           />
-          <p className="text-lg font-bold text-gray-500 flex items-center gap-2 p-4">
+          <p className="text-lg font-bold text-gray-600 flex items-center gap-2 p-4">
             <svg
-              className="w-4 h-4 text-blue-500"
+              className="w-4 h-4 text-blue-900"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -51,6 +52,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
       </div>
 
       <CTASection />
+      <IndustriesSection/>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#4169e1] text-[#f5f5f4] border-t border-gray-300 pt-12 pb-8"
+      className="bg-[#1e3a8a] text-[#f5f5f4] border-t border-gray-300 pt-12 pb-8"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-center">

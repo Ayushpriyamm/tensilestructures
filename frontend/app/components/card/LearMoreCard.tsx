@@ -51,7 +51,7 @@ export default function LearnMore({ title, description, image }: LearnMoreInterf
             <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
                 <Link
                     href="/services"
-                    className="text-tensile-copper hover:text-tensile-copper-light font-medium inline-flex items-center group"
+                    className="text-[#1e3a8a] hover:text-tensile-copper-light font-medium inline-flex items-center group"
                 >
                     Learn More
                     <svg

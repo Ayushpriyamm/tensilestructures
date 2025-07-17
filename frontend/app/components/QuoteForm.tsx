@@ -79,7 +79,7 @@ const QuoteForm = () => {
         >
             <div className="w-full max-w-2xl rounded-3xl bg-white border border-gray-200 shadow-2xl p-3 md:p-10 space-y-3">
                 <div className="text-center space-y-2">
-                    <h1 className="text-4xl font-extrabold text-gray-800">Request a Free Quotation</h1>
+                    <h1 className="text-4xl font-extrabold text-blue-900">Request a Free Quotation</h1>
                     <p className="text-gray-500 text-sm md:text-base">
                         Share your requirements and get a customized estimate tailored to your project.
                     </p>

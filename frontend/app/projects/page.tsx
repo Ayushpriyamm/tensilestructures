@@ -1,5 +1,4 @@
 'use client';
-
 import HeroCard from '../components/card/HeroCard';
 import { useState } from 'react';
 import { Card, Button } from '@heroui/react';

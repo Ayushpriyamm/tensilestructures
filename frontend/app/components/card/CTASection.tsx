@@ -1,54 +1,51 @@
-"use client";
+// CTASection.tsx
+'use client'
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { Button, Card } from "@heroui/react";
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
-export default function CTASection() {
-    return (
-        <section
-            className="relative py-24 bg-cover bg-center"
-            style={{
-                backgroundImage:
-                    "url('https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=1920&h=600&fit=crop&crop=faces')",
-            }}
+const CTASection = () => {
+  return (
+    <section
+      id="contact"
+      className="relative bg-[#1e3a8a] text-white py-20 overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 w-full h-full bg-blue-900/80 backdrop-blur-sm z-0" />
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-            {/* Glass overlay */}
-            <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0" />
+          Ready to Start Your Project?
+        </motion.h2>
 
-            {/* Animated glass card */}
-            <motion.div
-                className="relative z-10 max-w-3xl mx-auto"
-                initial={{ opacity: 0, y: 60, rotateX: -6 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                whileHover={{ scale: 1.015, rotateY: 2, rotateX: 1 }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: false }}
-            >
-                <Card className="rounded-3xl bg-white/10 border border-white/20 shadow-2xl backdrop-blur-md p-10 text-center m-4">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Ready to Build Something <span className="text-tensile-copper">Amazing</span>?
-                    </h2>
+        <motion.p
+          className="text-lg mb-8 max-w-2xl mx-auto text-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Whether it's a sports complex or a commercial venture, Divinam
+          Structuray delivers quality tensile solutions tailored to your needs.
+        </motion.p>
 
-                    <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-                        Let’s discuss your tensile structure project and bring your vision to life.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/contact">
-                            <Button className="bg-[#4169e1] text-white text-lg px-8 py-4 hover:bg-tensile-copper-light shadow-lg cursor-pointer">
-                                Start Your Project
-                            </Button>
-                        </Link>
-
-                        <Link href="/projects">
-                            <Button className="border border-white text-white hover:bg-white/10 text-lg px-8 py-4 cursor-pointer">
-                                View Portfolio
-                            </Button>
-                        </Link>
-                    </div>
-                </Card>
-            </motion.div>
-        </section>
-    );
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-[#1e3a8a] font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition"
+          >
+            Get in Touch
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  )
 }
+
+export default CTASection

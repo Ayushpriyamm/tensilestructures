@@ -36,7 +36,7 @@ export default function ContactPgae() {
         subheading="Get in touch with our expert team to explore durable, innovative tensile structure solutions tailored to your vision."
       />
 
-      <div className="main div flex flex-col sm:flex-row justify-center gap-4 py-10 px-5 items-center" >
+      <div className="main div flex flex-col sm:flex-row justify-center gap-4 py-10 px-5 items-center text-blue-900" >
         <div className="sm:w-3/4">
           <QuoteForm />
         </div>
