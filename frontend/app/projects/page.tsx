@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { projects } from "@/app/lib/projectData";
 import { categories } from '@/app/lib/projectData';
+import WhatsappButton from '../components/WhatsappButton';
 
 const MotionCard = motion(Card);
 const MotionButton = motion(Button);
@@ -99,6 +100,7 @@ export default function Projects() {
           ))}
         </div>
       </section>
+      <WhatsappButton/>
     </div>
   );
 }

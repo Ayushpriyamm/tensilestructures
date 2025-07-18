@@ -2,6 +2,7 @@
 import { Card } from "@heroui/react";
 import HeroCard from "../components/card/HeroCard";
 import QuoteForm from "../components/QuoteForm";
+import WhatsappButton from "../components/WhatsappButton";
 
 const contactInfo = [
   {
@@ -60,6 +61,7 @@ export default function ContactPgae() {
           </div>
         </div>
       </div>
+      <WhatsappButton/>
     </div>
 
 

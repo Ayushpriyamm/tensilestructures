@@ -4,6 +4,7 @@ import CTASection from "../components/card/CTASection";
 import HeroCard from "../components/card/HeroCard";
 import ServiceCard from "../components/card/ServicesCard";
 import CertificatesSection from "../components/CertificateSection";
+import WhatsappButton from "../components/WhatsappButton";
 
 const services = [
   {
@@ -86,6 +87,7 @@ export default function ServicesPage() {
       
         <CTASection />
       <CertificatesSection/>
+      <WhatsappButton/>
     </div>
   );
 }

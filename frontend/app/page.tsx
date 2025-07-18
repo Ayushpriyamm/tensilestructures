@@ -11,6 +11,7 @@ import PatronsCarousel from "./components/carousel/PatronCarousel"
 import { motion } from 'framer-motion'
 import QuoteForm from "./components/QuoteForm";
 import RecentWorkCard from "./components/card/RecentWorkCard";
+import WhatsappButton from "./components/WhatsappButton"
 import {
   Dumbbell,
   Store,
@@ -570,7 +571,7 @@ export default function Home() {
       </motion.div> */}
 
 
-
+        <WhatsappButton/>
      
 
     </div>

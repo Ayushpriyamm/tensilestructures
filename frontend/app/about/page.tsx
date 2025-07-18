@@ -7,6 +7,7 @@ import ProfileCard from "../components/card/ProfileCard";
 import { Check, Eye, Lightbulb, Award, Earth, Handshake } from 'lucide-react';
 import CTASection from "../components/card/CTASection";
 import TestimonialCard from "../components/card/TestimonialCard";
+import WhatsappButton from "../components/WhatsappButton";
 
 
 const testimonials = [
@@ -176,6 +177,7 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+      <WhatsappButton/>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { projects } from "@/app/lib/projectData";
 import HeroCard from "@/app/components/card/HeroCard";
 import CTASection from "@/app/components/card/CTASection";
 import IndustriesSection from "@/app/components/IndustriesSection";
+import WhatsappButton from "@/app/components/WhatsappButton";
 
 // Statically generate paths for all projects
 export async function generateStaticParams() {
@@ -53,6 +54,7 @@ export default async function ProjectDetail({ params }: { params: { slug: string
 
       <CTASection />
       <IndustriesSection/>
+      
     </div>
   );
 }
