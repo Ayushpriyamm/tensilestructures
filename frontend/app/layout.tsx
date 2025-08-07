@@ -74,16 +74,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const isSiteDisabled = process.env.NEXT_PUBLIC_SITE_DISABLED === "true";
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {/* ✅ children already include client components like <Button /> safely */}
-        <Providers>{children}</Providers>
-
-        <Footer></Footer>
+        {isSiteDisabled ? (
+          <div className="flex items-center justify-center min-h-screen bg-amber-100 text-red-800 px-4 text-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4">🚫 Site Unavailable</h1>
+              <p className="text-lg md:text-xl font-medium">
+                This website has been temporarily disabled due to non-payment.
+              </p>
+              <p className="text-sm mt-4 text-red-600">
+                Please contact the developer to restore access.
+              </p>
+            </div>
+          </div>
+        ) : (
+          <>
+            <Header />
+            <Providers>{children}</Providers>
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );

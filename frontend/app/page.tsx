@@ -28,6 +28,8 @@ import CertificatesSection from "./components/CertificateSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import IndustriesSection from "./components/IndustriesSection";
 
+
+
 export default function Home() {
   const services = [
     {
@@ -156,6 +158,8 @@ export default function Home() {
       icon: CalendarCheck,
     },
   ];
+
+  
 
 
   return (
