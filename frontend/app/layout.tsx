@@ -83,8 +83,8 @@ export default function RootLayout({
         {isSiteDisabled ? (
           <div className="flex items-center justify-center min-h-screen bg-amber-100 text-red-800 px-4 text-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-4">🚫 Site Unavailable</h1>
-              <p className="text-lg md:text-xl font-medium">
+              <h1 className="text-5xl md:text-5xl font-extrabold mb-4">🚫 Site Unavailable</h1>
+              <p className="text-xl md:text-2xl font-medium">
                 This website has been temporarily disabled due to non-payment.
               </p>
               <p className="text-sm mt-4 text-red-600">
