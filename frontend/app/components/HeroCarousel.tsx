@@ -26,13 +26,13 @@ const slides = [
     description:
       "Crafting expressive tensile forms that merge structural integrity with iconic design.",
   },
-  {
-    id: 3,
-    image: "/images/t10.avif",
-    title: "Engineered to Endure",
-    description:
-      "All-weather performance and unmatched durability for every environment.",
-  },
+  // {
+  //   id: 3,
+  //   image: "/images/t10.avif",
+  //   title: "Engineered to Endure",
+  //   description:
+  //     "All-weather performance and unmatched durability for every environment.",
+  // },
   {
     id: 4,
     image: "/images/t15.jpg",
