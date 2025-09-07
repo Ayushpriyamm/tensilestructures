@@ -202,15 +202,15 @@ export default function Home() {
       </div> */}
 
       {/* About Section*/}
-      <section id="about" className="py-16 bg-white">
+      <section id="about" className="py-16 bg-white"> 
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <Image
-              src="/images/t14.jpg" // Replace with your about image
+              src="/images/aboutImg.jpeg" // Replace with your about image
               alt="About Divinam Structuray"
               width={600}
               height={400}
-              className="rounded-lg shadow-xl object-cover"
+              className="rounded-lg shadow-xl object-cover h-full w-full max-h-[600px]"
             />
           </div>
 

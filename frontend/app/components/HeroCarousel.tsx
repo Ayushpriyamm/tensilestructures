@@ -14,14 +14,14 @@ const slides = [
   {
     id: 1,
     
-    image: "/images/t12.webp",
+    image: "/images/bg1.jpeg",
     title: "Setting the Standard in Tensile Design",
     description:
       "Pioneering the future of architectural membranes with innovation, elegance, and precision.",
   },
   {
     id: 2,
-    image: "/images/t14.jpg",
+    image: "/images/bg2.jpeg",
     title: "Where Engineering Meets Art",
     description:
       "Crafting expressive tensile forms that merge structural integrity with iconic design.",
@@ -35,14 +35,14 @@ const slides = [
   // },
   {
     id: 4,
-    image: "/images/t15.jpg",
+    image: "/images/bg3.jpeg",
     title: "Designing Landmarks, Not Just Structures",
     description:
       "Creating bold, recognizable silhouettes that define skylines and spaces.",
   },
   {
     id: 5,
-    image: "/images/t14.jpg",
+    image: "/images/bg4.jpeg",
     title: "Global Expertise, Local Execution",
     description:
       "Delivering world-class tensile solutions—on time, on spec, and on budget.",
